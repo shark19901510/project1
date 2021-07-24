@@ -1,0 +1,7 @@
+---
+- name: install Apdche and Upload
+  hosts: all
+  become: yes
+
+  roles:
+    - apache

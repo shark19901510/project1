@@ -1,0 +1,4 @@
+---
+# vars file for apache
+
+dst1: /var/www/html

@@ -1,0 +1,14 @@
+---
+# tasks file for apache
+
+- name: install Apache
+  yum: name=httpd state=latest
+
+- name: Start 
+  service: name=httpd state=started enabled=yes
+
+- name: Copy
+  copy: src=index.html dest={{ dst1 }} mode=0555
+
+  notify:
+    - Restart
